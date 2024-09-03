@@ -18,7 +18,7 @@ export interface IWeatherData {
 
 const City: React.FC = () => {
 	const [weather, setWeather] = useState<IWeatherData>();
-	const [errorMessage, setErrorMessage] = useState<unknown>();
+	// const [errorMessage, setErrorMessage] = useState<unknown>();
 
 	useEffect(() => {
 		const fetchWeather = async () => {
@@ -44,10 +44,10 @@ const City: React.FC = () => {
 
 				// Attributes for timezone and location
 				const utcOffsetSeconds = response.utcOffsetSeconds();
-				const timezone = response.timezone();
-				const timezoneAbbreviation = response.timezoneAbbreviation();
-				const latitude = response.latitude();
-				const longitude = response.longitude();
+				// const timezone = response.timezone();
+				// const timezoneAbbreviation = response.timezoneAbbreviation();
+				// const latitude = response.latitude();
+				// const longitude = response.longitude();
 
 				const current = response.current()!;
 
@@ -66,9 +66,7 @@ const City: React.FC = () => {
 						windDirection: current.variables(5)!.value(),
 					},
 				});
-			} catch (error) {
-				setErrorMessage(error);
-			}
+			} catch (error) {}
 		};
 
 		fetchWeather();
