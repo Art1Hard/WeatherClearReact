@@ -8,7 +8,7 @@ const App: React.FC = () => {
 			<Header />
 			<div className="container p-5 pt-0 mx-auto">
 				<h1 className="text-center text-4xl text-black mb-7">
-					Самая <span className="font-bold">точная</span> погода во вселенной!
+					Самая <span className="font-bold">точная</span> погода вселенной!
 				</h1>
 				<h3 className="text-center text-3xl mb-5">Введите свой город</h3>
 				<input
