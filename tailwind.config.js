@@ -34,6 +34,11 @@ export default {
 			);
 
 			addUtilities(strokeUtilities, ["responsive", "hover"]);
+			addUtilities({
+				".font-palan": {
+					"font-family": '"Palanquin Dark", sans-serif',
+				},
+			});
 		}),
 	],
 };
